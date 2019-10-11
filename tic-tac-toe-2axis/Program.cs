@@ -41,6 +41,8 @@ namespace tic_tac_toe
         {
             char player = 'X';
             int turn = 0;
+            int x = 0;
+            int y = 0;
             while (turn < 9) {
                 if (turn % 2 == 0)
                     player = 'X';
@@ -52,12 +54,13 @@ namespace tic_tac_toe
                 Console.WriteLine($"It's {player}'s turn\n");
                 Console.Write("Place: ");
                 string location = Console.ReadLine();
-                Coords(ref location);
-                if (location < 10)
+                int locationNumber = int.Parse(location);
+                Coords(location, ref x, ref y);
+                if (locationNumber < 10)
                 {
-                    if (gameBoard[location - 1] != 'O' && gameBoard[location - 1] != 'X')
+                    if (gameBoard[x, y] != 'O' && gameBoard[x, y] != 'X')
                     {
-                        gameBoard[location - 1] = player;
+                        gameBoard[x, y] = player;
                         Print(gameBoard);
                     }
                     else {
@@ -129,11 +132,44 @@ namespace tic_tac_toe
             }
         }
 
-        static int Coords(ref string coordLocation)
+        //Convert a number to a coordinate in the array
+        static void Coords(string coordLocation, ref int coordX, ref int coordY)
         {
             if (coordLocation == "1") {
-                coordLocation = "0, 0";
-                return coordLocation;
+                coordX = 0;
+                coordY = 0;
+            }
+            if (coordLocation == "2") {
+                coordX = 0;
+                coordY = 1;
+            }
+            if (coordLocation == "3") {
+                coordX = 0;
+                coordY = 2;
+            }
+            if (coordLocation == "4") {
+                coordX = 1;
+                coordY = 0;
+            }
+            if (coordLocation == "5") {
+                coordX = 1;
+                coordY = 1;
+            }
+            if (coordLocation == "6") {
+                coordX = 1;
+                coordY = 2;
+            }
+            if (coordLocation == "7") {
+                coordX = 2;
+                coordY = 0;
+            }
+            if (coordLocation == "8") {
+                coordX = 2;
+                coordY = 1;
+            }
+            if (coordLocation == "9") {
+                coordX = 2;
+                coordY = 2;
             }
         }
 
