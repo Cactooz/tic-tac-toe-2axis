@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace tic_tac_toe
 {
@@ -80,6 +80,7 @@ namespace tic_tac_toe
                     {
                         Console.WriteLine($"Player {player} has won the game!\n");
                         Console.WriteLine("Write MENU to get back to main menu.");
+                        //Console.WriteLine(CheckWin(gameBoard));
                         string answer = Console.ReadLine();
                         string endAnswer = answer.ToLower();
                         if (endAnswer == "menu")
@@ -126,9 +127,10 @@ namespace tic_tac_toe
             Console.WriteLine("Tic Tac Toe\n");
             for (int x = 0; x < printBoard.GetLength(0); x++) {
                 for (int y = 0; y < printBoard.GetLength(1); y++) {
-                    Console.Write($"{printBoard[x, y]} ");
+                    Console.Write($"{printBoard[x, y]}");
+                    Console.Write(" | ");           
                 }
-                Console.WriteLine();
+                Console.WriteLine("\n—————————");
             }
         }
 
@@ -198,7 +200,7 @@ namespace tic_tac_toe
             if (resultBoard[0, 0] != '█' && resultBoard[0, 0] == resultBoard[1, 1] && resultBoard[1, 1] == resultBoard[2, 2] && resultBoard[0, 0] == resultBoard[2, 2])
                 return 7;
             //Check for diagonal top right to bottom left /
-            if (resultBoard[2, 2] != '█' && resultBoard[2, 2] == resultBoard[1, 1] && resultBoard[1, 1] == resultBoard[2, 0] && resultBoard[2, 2] == resultBoard[2, 0])
+            if (resultBoard[2, 2] != '█' && resultBoard[2, 2] == resultBoard[1, 1] && resultBoard[1, 1] == resultBoard[0, 2] && resultBoard[2, 2] == resultBoard[0, 2])
                 return 8;
             else
                 return 0;
