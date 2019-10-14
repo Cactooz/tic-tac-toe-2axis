@@ -50,7 +50,7 @@ namespace tic_tac_toe
                     player = 'O';
                 turn++;
                 Print(gameBoard);
-                Console.WriteLine($"Turn: {turn}");
+                Console.WriteLine($"\nTurn: {turn}");
                 Console.WriteLine($"It's {player}'s turn\n");
                 Console.Write("Place: ");
                 string location = Console.ReadLine();
@@ -128,9 +128,11 @@ namespace tic_tac_toe
             for (int x = 0; x < printBoard.GetLength(0); x++) {
                 for (int y = 0; y < printBoard.GetLength(1); y++) {
                     Console.Write($"{printBoard[x, y]}");
-                    Console.Write(" | ");           
+                    if (y != 2)
+                        Console.Write(" | ");           
                 }
-                Console.WriteLine("\n—————————");
+                if (x != 2)
+                    Console.WriteLine("\n—————————");
             }
         }
 
