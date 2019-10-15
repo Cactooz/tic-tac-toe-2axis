@@ -80,7 +80,6 @@ namespace tic_tac_toe_2axis
                     {
                         Console.WriteLine($"\nPlayer {player} has won the game!\n");
                         Console.WriteLine("Write MENU to get back to main menu.");
-                        Console.WriteLine(CheckWin(gameBoard));
                         string answer = Console.ReadLine();
                         string endAnswer = answer.ToLower();
                         if (endAnswer == "menu")
