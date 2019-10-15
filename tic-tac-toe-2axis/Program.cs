@@ -1,6 +1,6 @@
 using System;
 
-namespace tic_tac_toe
+namespace tic_tac_toe_2axis
 {
     class Program
     {
@@ -78,9 +78,9 @@ namespace tic_tac_toe
                     CheckWin(gameBoard);
                     if (CheckWin(gameBoard) > 0)
                     {
-                        Console.WriteLine($"Player {player} has won the game!\n");
+                        Console.WriteLine($"\nPlayer {player} has won the game!\n");
                         Console.WriteLine("Write MENU to get back to main menu.");
-                        //Console.WriteLine(CheckWin(gameBoard));
+                        Console.WriteLine(CheckWin(gameBoard));
                         string answer = Console.ReadLine();
                         string endAnswer = answer.ToLower();
                         if (endAnswer == "menu")
@@ -88,7 +88,7 @@ namespace tic_tac_toe
                     }
                 }
             }
-            Console.WriteLine("It's a DRAW...");
+            Console.WriteLine("\nIt's a DRAW...");
             System.Threading.Thread.Sleep(3000); //Wait for 3 seconds
             Menu(gameBoard);
         }
@@ -202,7 +202,7 @@ namespace tic_tac_toe
             if (resultBoard[0, 0] != '█' && resultBoard[0, 0] == resultBoard[1, 1] && resultBoard[1, 1] == resultBoard[2, 2] && resultBoard[0, 0] == resultBoard[2, 2])
                 return 7;
             //Check for diagonal top right to bottom left /
-            if (resultBoard[2, 2] != '█' && resultBoard[2, 2] == resultBoard[1, 1] && resultBoard[1, 1] == resultBoard[0, 2] && resultBoard[2, 2] == resultBoard[0, 2])
+            if (resultBoard[0, 2] != '█' && resultBoard[0, 2] == resultBoard[1, 1] && resultBoard[1, 1] == resultBoard[2, 0] && resultBoard[0, 2] == resultBoard[2, 0])
                 return 8;
             else
                 return 0;

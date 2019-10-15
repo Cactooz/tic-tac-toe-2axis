@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tic-tac-toe-2axis", "tic-tac-toe-2axis\tic-tac-toe-2axis.csproj", "{1BEB074E-54ED-493D-97A1-E5AE4C82DD2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tic-tac-toe-2axis", "tic-tac-toe-2axis\tic-tac-toe-2axis.csproj", "{AB364424-5DFF-42E8-9810-993A698E7243}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1BEB074E-54ED-493D-97A1-E5AE4C82DD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BEB074E-54ED-493D-97A1-E5AE4C82DD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BEB074E-54ED-493D-97A1-E5AE4C82DD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BEB074E-54ED-493D-97A1-E5AE4C82DD2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB364424-5DFF-42E8-9810-993A698E7243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB364424-5DFF-42E8-9810-993A698E7243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB364424-5DFF-42E8-9810-993A698E7243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB364424-5DFF-42E8-9810-993A698E7243}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {787246C6-DA0F-446F-B16A-342F1F28D19C}
+		SolutionGuid = {CF424080-8B9B-4B10-BC69-B6540F523C19}
 	EndGlobalSection
 EndGlobal
